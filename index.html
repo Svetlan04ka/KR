@@ -1,44 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Погода</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="scritp.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Vozdyxan</h1>
-        <p>Weather</p>
-        <p>Maps</p>
-        <p>Info</p>
-        <div class="input">
-            <input type="text" class="search" placeholder="Search" />
-            <button>Search</button>
-        </div>
-        <div class="container2">
-            <h5></h5>
-            <h6></h6>
-            <img>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <a href="https://github.com/Vozdyxan">Ctujlyz</a>
-        <a href="https://github.com/Vozdyxan">Ctujlyz</a>
-        <a href="https://github.com/Vozdyxan">Ctujlyz</a>
-        <a href="https://github.com/Vozdyxan">Ctujlyz</a>
-        <a href="https://github.com/Vozdyxan">Ctujlyz</a>
-        <a href="https://github.com/Vozdyxan">Ctujlyz</a>
+
+<!-- 🌫 ГЛАВНЫЙ ФОН -->
+<div class="bg"></div>
+
+<div class="app">
+
+    <!-- 🔍 ПОИСК -->
+    <div class="searchBox">
+        <input type="text" id="searchCity" placeholder="город">
+        <button id="searchBtn">поиск</button>
     </div>
 
-</body>
+    <!-- 🌤 ОСНОВНАЯ ПАНЕЛЬ -->
+    <div class="mainPanel">
 
+        <h2 id="city">Город</h2>
+
+        <img id="weatherIcon" class="icon">
+
+        <div class="tempBig">
+            <span id="temperature">--</span>°C
+        </div>
+
+        <p id="description">погода</p>
+
+        <div class="miniInfo">
+            <p>Ощущается: <span id="feelsLike"></span>°C</p>
+            <p>Ветер: <span id="wind"></span> м/с</p>
+            <p>Влажность: <span id="humidity"></span>%</p>
+            <p>Давление: <span id="pressure"></span> гПа</p>
+        </div>
+
+    </div>
+
+    <!-- 📅 ПРОГНОЗ -->
+    <div class="forecast" id="forecast"></div>
+
+    <!-- 🧠 БЛОК ИНФО ПО ГОРОДУ -->
+    <div class="cityInfo">
+
+        <!-- 👉 СЮДА БУДЕТ ПОДСТАВЛЯТЬСЯ ИНФА -->
+        <h3>Информация о городе</h3>
+        <p id="cityInfoText">
+            <!-- API / JS вставит сюда текст -->
+        </p>
+
+    </div>
+
+    <!-- 👦 МАЛЬЧИК (картинка/персонаж) -->
+    <div class="boy">
+        <img src="2.png" alt="boy">
+    </div>
+
+</div>
+
+</body>
 </html>
